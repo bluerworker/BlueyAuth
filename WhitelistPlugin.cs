@@ -112,7 +112,7 @@ public class WhitelistPlugin : ServerPlugin
     {
         if (!File.Exists(whitelistFile))
         {
-            string[] defaults = { "c8b4bcfb-faff-8a66-7f1e-c159747a5b4f" };
+            string[] defaults = { "00000000-0000-0000-0000-000000000000" };
             File.WriteAllLines(whitelistFile, defaults);
             whitelist = new HashSet<string>(defaults, StringComparer.OrdinalIgnoreCase);
         }
