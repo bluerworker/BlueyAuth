@@ -213,7 +213,7 @@ public class VerifyCommand : CommandExecutor
         if (WhitelistPlugin.VerifyCode(code, playerName))
         {
             player.sendMessage("You are now verified!");
-            player.sendMessage("Welcome to Blue SMP!");
+            player.sendMessage("Welcome");
         }
         else
         {
