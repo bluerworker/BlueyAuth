@@ -17,7 +17,7 @@ public class WhitelistPlugin : ServerPlugin
     public override string author => "Bluer";
 
     private static string whitelistFile = "plugins/WhitelistPlugin/whitelist.txt";
-    private static string codesFile = @"C:\Users\Administrator\Documents\LCE-Revelations-Server-Win64-FourKit\plugins\WhitelistPlugin\verified_codes.json";
+    private static string codesFile = @"CHANGE_PATH_TO_VERIFIED_CODES_JSON";
     private static HashSet<string> whitelist = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
     private static Dictionary<string, (string username, double expires)> codes = new Dictionary<string, (string, double)>();
 
@@ -109,7 +109,15 @@ public class WhitelistPlugin : ServerPlugin
     public override void onDisable() { }
 
     private void LoadWhitelist()
-
+    {
+        if (!File.Exists(whitelistFile))
+        {
+            string[] defaults = { "c8b4bcfb-faff-8a66-7f1e-c159747a5b4f" };
+            File.WriteAllLines(whitelistFile, defaults);
+            whitelist = new HashSet<string>(defaults, StringComparer.OrdinalIgnoreCase);
+        }
+        else
+        {
             var lines = File.ReadAllLines(whitelistFile);
             whitelist = new HashSet<string>(lines.Select(w => w.Trim()).Where(w => !string.IsNullOrEmpty(w)), StringComparer.OrdinalIgnoreCase);
         }
