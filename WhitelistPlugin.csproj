@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <AssemblyName>WhitelistPlugin</AssemblyName>
+    <Version>1.0.0</Version>
+    <Authors>Bluer</Authors>
+    <Description>Custom whitelist</Description>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Minecraft.Server.FourKit">
+      <HintPath>..\..\Minecraft.Server.Fourkit.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
