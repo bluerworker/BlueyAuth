@@ -5,7 +5,6 @@ Discord verification bot for FourKit Minecraft servers.
 ## Features
 
 - Players verify via Discord channel
-- Emoji removes from usernames
 - DM or channel code delivery
 - One-time codes (10 min expiry)
 
