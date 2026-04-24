@@ -109,15 +109,7 @@ public class WhitelistPlugin : ServerPlugin
     public override void onDisable() { }
 
     private void LoadWhitelist()
-    {
-        if (!File.Exists(whitelistFile))
-        {
-            string[] defaults = { "c8b4bcfb-faff-8a66-7f1e-c159747a5b4f" };
-            File.WriteAllLines(whitelistFile, defaults);
-            whitelist = new HashSet<string>(defaults, StringComparer.OrdinalIgnoreCase);
-        }
-        else
-        {
+
             var lines = File.ReadAllLines(whitelistFile);
             whitelist = new HashSet<string>(lines.Select(w => w.Trim()).Where(w => !string.IsNullOrEmpty(w)), StringComparer.OrdinalIgnoreCase);
         }
