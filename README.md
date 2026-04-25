@@ -30,7 +30,7 @@ python verify_bot.py
 ## Usage
 
 1. Player types Minecraft name in #verify channel
-2. Bot sends code (DM or channel)
+2. Bot sends code (DM)
 3. Player joins game and runs `/verify <code>`
 4. If valid, they're whitelisted
 
