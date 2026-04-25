@@ -12,7 +12,7 @@ client = discord.Client(intents=intents)
 
 # === CONFIG ===
 channel_name = "username-verify"  # Discord channel name
-codes_path = r"CHANGE_THIS\plugins\WhitelistPlugin\verified_codes.json"  # Must match server path
+codes_path = r"C:\Users\Administrator\Documents\LCE-Revelations-Server-Win64-FourKit\plugins\WhitelistPlugin\verified_codes.json"  # Must match server path
 # ===========
 
 codes = {}
@@ -77,6 +77,6 @@ def save_codes():
         json.dump(codes, f)
 
 # YOUR BOT TOKEN - Get from https://discord.com/developers/applications
-BOT_TOKEN = "YOUR_TOKEN_HERE"
+BOT_TOKEN = ""
 
 client.run(BOT_TOKEN)
