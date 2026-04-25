@@ -12,7 +12,7 @@ client = discord.Client(intents=intents)
 
 # === CONFIG ===
 channel_name = "username-verify"  # Discord channel name
-codes_path = r"C:\Users\Administrator\Documents\LCE-Revelations-Server-Win64-FourKit\plugins\WhitelistPlugin\verified_codes.json"  # Must match server path
+codes_path = r"C:\Users\USER\Documents\LCE-Revelations-Server-Win64-FourKit\plugins\WhitelistPlugin\verified_codes.json"  # Must match server path
 # ===========
 
 codes = {}
